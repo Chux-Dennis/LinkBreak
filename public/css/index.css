@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Outfit&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #003554;
+}
+nav{
+    background: #0582ca;
+    color: #fff !important;
+}
+.fa-github{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.nav-item{
+    margin-right: 10px;
+}
+.gold-container{
+    background-color: #ffd700;
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+p.ban{
+    color: #fff;
+    padding-top: 7px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Afacad";
+    color: #ffd700;
+    letter-spacing: 2px;
+    margin-inline: 5%;
+}
+.header-text{
+    color: #fff;
+    font-family: "Poppins";
+}
+.input-group{
+    /* margin-inline: 4%; */
+}
+.form-control{
+    width: 50%;
+}
+.fixed-bottom{
+    background-color: transparent !important;
+}
+.fixed-bottom a{
+    font-family: "Outfit";
+    color: #f4f4f4;
+    opacity: .7;
+    text-decoration: none;
+    
+}
+.fixed-bottom p{
+    font-family: "Outfit";
+    font-size: .7rem;
+
+}
