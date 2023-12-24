@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Montserrat&family=Outfit&family=Poppins:wght@500&display=swap');
+
+
+body{
+    background-color: #f4f4f4;
+    display: flex;
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: -5;
+    height: 100vh;
+}
+.card{
+    border-radius:10px ;
+    z-index: 1;
+}
+.card-title{
+    font-family: "Poppins";
+    font-weight: 800;
+}
+.card-text{
+    font-family: "Montserrat";
+}
+.return{
+    color: #fff;
+    text-decoration: none;
+}
