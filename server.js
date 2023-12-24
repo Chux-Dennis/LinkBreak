@@ -1,3 +1,4 @@
+let PORT = 3000;
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -20,7 +21,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/hero-form", (req, res) => {
-  console.log(req.body);
   const givenParam = req.body.heroLink;
 
   const newlink = new links({
@@ -28,6 +28,26 @@ app.post("/hero-form", (req, res) => {
     uniqueID: hashFunction(givenParam),
   });
   newlink.save();
+
+  const revealFunc = function () {
+    links.findOne({ redirectUrl: givenParam }).then((success) => {
+      if (success) {
+        let file = {
+          headingMessage: "URL has been enhanced",
+          headingText: `Your new link: localhost:${PORT}/rdr/${success.uniqueID}`,
+        };
+        return res.render("linkPage", file);
+      } else {
+        let file = {
+          headingMessage: "An Error Occurred",
+          headingText: "There is an issue in generating your redirect URL",
+        };
+        res.render("search404", file);
+      }
+    });
+  };
+
+  setTimeout(revealFunc, 1500);
 });
 
 app.get("/rdr/:link", (req, res) => {
@@ -54,5 +74,4 @@ app.get("/rdr/:link", (req, res) => {
     }
   });
 });
-let PORT = 3000;
 app.listen(PORT, console.log(`Server is running on ${PORT}`));
