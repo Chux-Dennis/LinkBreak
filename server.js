@@ -34,7 +34,8 @@ app.post("/hero-form", (req, res) => {
       if (success) {
         let file = {
           headingMessage: "URL has been enhanced",
-          headingText: `Your new link: localhost:${PORT}/rdr/${success.uniqueID}`,
+          headingText: `localhost:${PORT}/rdr/${success.uniqueID}`,
+          imgID: `https://api.qrserver.com/v1/create-qr-code/?data=${success.redirectUrl}&amp;size=50x50"`,
         };
         return res.render("linkPage", file);
       } else {

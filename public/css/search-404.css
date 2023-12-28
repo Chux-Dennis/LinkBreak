@@ -21,6 +21,9 @@ body{
 }
 .card-text{
     font-family: "Montserrat";
+    background-color: #d3d3d3;
+    opacity: .7;
+    padding: 10px;
 }
 .return{
     color: #fff;
